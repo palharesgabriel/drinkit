@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
+            if err == nil && wasAuthorized {
+                NotificationHandler.shared.sendDefaultNotification()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

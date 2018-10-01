@@ -24,20 +24,5 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Zq4-2T-MUR">
-            <objects>
-                <viewController id="VPa-f8-Z4B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jNP-WR-e4O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="wxS-pE-C5P"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cKx-sp-YZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1119" y="134"/>
-        </scene>
     </scenes>
 </document>
