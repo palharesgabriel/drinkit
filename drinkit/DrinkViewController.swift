@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol DrinkViewControllerDelegate: class {
+    func updateTotal(drink: Int)
+}
+
 class DrinkViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    weak var delegate: DrinkViewControllerDelegate?
     
     let options = [200, 300, 400, 500, 600, 700]
     
@@ -44,6 +50,13 @@ extension DrinkViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.tintColor = UIColor.white
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let drink = options[indexPath.row]
+        dismiss(animated: true) {
+            self.delegate?.updateTotal(drink: drink)
+        }
     }
     
     
