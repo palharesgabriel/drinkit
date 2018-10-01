@@ -26,11 +26,9 @@ class ViewController: UIViewController {
         NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
             print("Was authorized?: \(wasAuthorized)")
             if wasAuthorized {
-                self.scheduleDrinkitNotifications()
+                // self.scheduleDrinkitNotifications()
             }
         }
-        
-        // scheduleDrinkitNotifications()
     }
 
     
