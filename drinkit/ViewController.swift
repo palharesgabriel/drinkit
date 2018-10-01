@@ -21,15 +21,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
-            if err == nil && wasAuthorized {
-                NotificationHandler.shared.sendDefaultNotification()
+            print("Was authorized?: \(wasAuthorized)")
+            if wasAuthorized {
+                self.scheduleDrinkitNotifications()
             }
         }
+        
+        // scheduleDrinkitNotifications()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+
+    func scheduleDrinkitNotifications() {
+        if !UserDefaults.standard.bool(forKey: "isNotFirst") {
+            NotificationHandler.shared.sendNotificationWith(
+                title: "Tomar água",
+                subtitle: "Hora da Hidratação",
+                body: "Hidrate-se meu filho, é importante",
+                timeDelay: 7200,
+                repeats: true)
+
+            UserDefaults.standard.set(true, forKey: "isNotFirst")
+        }
     }
 
 
