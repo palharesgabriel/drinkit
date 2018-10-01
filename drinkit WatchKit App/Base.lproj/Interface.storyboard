@@ -1,16 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="drinkit_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="95" alignment="left" text="500/1000 ml" textAlignment="center" id="5ow-E7-q9N">
+                            <color key="textColor" red="0.0078431372550000003" green="0.58431372550000005" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="23"/>
+                        </label>
+                        <button width="1" height="52" alignment="left" title="Drink It" id="Jjj-pu-ddk">
+                            <color key="titleColor" red="1" green="0.63529411759999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="23"/>
+                            <connections>
+                                <action selector="drinkBtnClicked" destination="AgC-eL-Hgc" id="LFF-IX-Vgr"/>
+                                <segue destination="OJg-Tz-dHy" kind="modal" identifier="Drink" id="5Aa-5g-wn4"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="percentageLabel" destination="5ow-E7-q9N" id="53W-RW-fmc"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Quantity Interface Controller-->
+        <scene sceneID="HNI-FC-Ia9">
+            <objects>
+                <controller id="OJg-Tz-dHy" customClass="QuantityInterfaceController" customModule="drinkit_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="sas-ik-qlp">
+                            <items>
+                                <tableRow identifier="TableRow" id="vk5-MP-gch" customClass="RowController" customModule="drinkit_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Rj0-YD-I8N">
+                                        <items>
+                                            <label width="132" height="118" alignment="left" text="50" textAlignment="center" id="rZd-p5-b8B">
+                                                <color key="textColor" red="0.0078431372550000003" green="0.58431372550000005" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="boldSystem" pointSize="23"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lbl" destination="rZd-p5-b8B" id="70D-RA-uQO"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="sas-ik-qlp" id="TBS-CW-vDI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="488" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +83,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="drinkit_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
