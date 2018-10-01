@@ -38,6 +38,7 @@ class QuantityInterfaceController: WKInterfaceController {
                 InterfaceController.total = total
             }, errorHandler: nil)
         }
+        self.dismiss()
     }
 
     override func willActivate() {
