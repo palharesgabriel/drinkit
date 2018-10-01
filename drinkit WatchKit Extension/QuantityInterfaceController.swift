@@ -14,17 +14,17 @@ import WatchConnectivity
 class QuantityInterfaceController: WKInterfaceController {
 
     @IBOutlet var tableView: WKInterfaceTable!
-    let data = ["200 ml", "300 ml" , "400 ml" , "500 ml", "600 ml", "700 ml"]
+    let values = [200,300,400,500,600,700]
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         WCSession.default.delegate = self
         WCSession.default.activate()
-        tableView.setNumberOfRows(data.count, withRowType: "TableRow")
+        tableView.setNumberOfRows(values.count, withRowType: "TableRow")
         
         for i in 0..<tableView.numberOfRows{
             let rowController = tableView.rowController(at: i) as? RowController
-            rowController?.lbl.setText(data[i])
+            rowController?.lbl.setText("\(values[i]) ml")
             
         }
         // Configure interface objects here.
@@ -32,7 +32,7 @@ class QuantityInterfaceController: WKInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         if (WCSession.default.isReachable) {
             // this is a meaningless message, but it's enough for our purposes
-            let message = ["Message": data[rowIndex]]
+            let message = ["value": values[rowIndex]]
             WCSession.default.sendMessage(message, replyHandler: { (response) in
                 let total = response["total"] as! Int
                 InterfaceController.total = total
