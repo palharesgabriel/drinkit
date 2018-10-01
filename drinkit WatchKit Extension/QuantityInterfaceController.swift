@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class QuantityInterfaceController: WKInterfaceController {
@@ -17,6 +18,8 @@ class QuantityInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        WCSession.default.delegate = self
+        WCSession.default.activate()
         tableView.setNumberOfRows(data.count, withRowType: "TableRow")
         
         for i in 0..<tableView.numberOfRows{
@@ -27,7 +30,14 @@ class QuantityInterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        //some code
+        if (WCSession.default.isReachable) {
+            // this is a meaningless message, but it's enough for our purposes
+            let message = ["Message": data[rowIndex]]
+            WCSession.default.sendMessage(message, replyHandler: { (response) in
+                let total = response["total"] as! Int
+                InterfaceController.total = total
+            }, errorHandler: nil)
+        }
     }
 
     override func willActivate() {
@@ -40,4 +50,10 @@ class QuantityInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+extension QuantityInterfaceController: WCSessionDelegate{
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
 }
