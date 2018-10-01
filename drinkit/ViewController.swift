@@ -93,6 +93,8 @@ extension ViewController: WCSessionDelegate {
         DispatchQueue.main.async {
             self.setLabelText()
         }
+        let response = ["total": total]
+        replyHandler(response)
     }
     
     
