@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE57F2322162449300090C66 /* QuantityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F2312162449300090C66 /* QuantityInterfaceController.swift */; };
+		BE57F234216246E300090C66 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F233216246E300090C66 /* RowController.swift */; };
 		BECAA17A21623DC300D17F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17921623DC300D17F76 /* AppDelegate.swift */; };
 		BECAA17C21623DC300D17F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17B21623DC300D17F76 /* ViewController.swift */; };
 		BECAA17F21623DC300D17F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECAA17D21623DC300D17F76 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE57F2312162449300090C66 /* QuantityInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityInterfaceController.swift; sourceTree = "<group>"; };
+		BE57F233216246E300090C66 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		BECAA17621623DC300D17F76 /* drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECAA17921623DC300D17F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECAA17B21623DC300D17F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		BECAA19B21623DC700D17F76 /* drinkit WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BE57F2312162449300090C66 /* QuantityInterfaceController.swift */,
 				BECAA19C21623DC700D17F76 /* InterfaceController.swift */,
 				BECAA19E21623DC700D17F76 /* ExtensionDelegate.swift */,
 				BECAA1A021623DC700D17F76 /* NotificationController.swift */,
@@ -158,6 +163,7 @@
 				BECAA1A421623DC700D17F76 /* Assets.xcassets */,
 				BECAA1A621623DC700D17F76 /* Info.plist */,
 				BECAA1A721623DC700D17F76 /* PushNotificationPayload.apns */,
+				BE57F233216246E300090C66 /* RowController.swift */,
 			);
 			path = "drinkit WatchKit Extension";
 			sourceTree = "<group>";
@@ -230,12 +236,14 @@
 				TargetAttributes = {
 					BECAA17521623DC300D17F76 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					BECAA18721623DC600D17F76 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					BECAA19621623DC700D17F76 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -303,10 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE57F234216246E300090C66 /* RowController.swift in Sources */,
 				BECAA1A121623DC700D17F76 /* NotificationController.swift in Sources */,
 				BECAA1A321623DC700D17F76 /* ComplicationController.swift in Sources */,
 				BECAA19F21623DC700D17F76 /* ExtensionDelegate.swift in Sources */,
 				BECAA19D21623DC700D17F76 /* InterfaceController.swift in Sources */,
+				BE57F2322162449300090C66 /* QuantityInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +493,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -505,7 +515,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -562,7 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -580,7 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
