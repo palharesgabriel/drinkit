@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BECAA17A21623DC300D17F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17921623DC300D17F76 /* AppDelegate.swift */; };
+		BECAA17C21623DC300D17F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17B21623DC300D17F76 /* ViewController.swift */; };
+		BECAA17F21623DC300D17F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECAA17D21623DC300D17F76 /* Main.storyboard */; };
+		BECAA18121623DC600D17F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECAA18021623DC600D17F76 /* Assets.xcassets */; };
+		BECAA18421623DC600D17F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECAA18221623DC600D17F76 /* LaunchScreen.storyboard */; };
+		BECAA18921623DC600D17F76 /* drinkit WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BECAA18821623DC600D17F76 /* drinkit WatchKit App.app */; };
+		BECAA18F21623DC600D17F76 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECAA18D21623DC600D17F76 /* Interface.storyboard */; };
+		BECAA19121623DC600D17F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECAA19021623DC600D17F76 /* Assets.xcassets */; };
+		BECAA19821623DC700D17F76 /* drinkit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BECAA19721623DC700D17F76 /* drinkit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BECAA19D21623DC700D17F76 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA19C21623DC700D17F76 /* InterfaceController.swift */; };
+		BECAA19F21623DC700D17F76 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA19E21623DC700D17F76 /* ExtensionDelegate.swift */; };
+		BECAA1A121623DC700D17F76 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA1A021623DC700D17F76 /* NotificationController.swift */; };
+		BECAA1A321623DC700D17F76 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA1A221623DC700D17F76 /* ComplicationController.swift */; };
+		BECAA1A521623DC700D17F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECAA1A421623DC700D17F76 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BECAA18A21623DC600D17F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BECAA16E21623DC300D17F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BECAA18721623DC600D17F76;
+			remoteInfo = "drinkit WatchKit App";
+		};
+		BECAA19921623DC700D17F76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BECAA16E21623DC300D17F76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BECAA19621623DC700D17F76;
+			remoteInfo = "drinkit WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BECAA1AD21623DC700D17F76 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BECAA19821623DC700D17F76 /* drinkit WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECAA1B121623DC700D17F76 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				BECAA18921623DC600D17F76 /* drinkit WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BECAA17621623DC300D17F76 /* drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECAA17921623DC300D17F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BECAA17B21623DC300D17F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BECAA17E21623DC300D17F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BECAA18021623DC600D17F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECAA18321623DC600D17F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BECAA18521623DC600D17F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECAA18821623DC600D17F76 /* drinkit WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "drinkit WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECAA18E21623DC600D17F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		BECAA19021623DC600D17F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECAA19221623DC600D17F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECAA19721623DC700D17F76 /* drinkit WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "drinkit WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECAA19C21623DC700D17F76 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		BECAA19E21623DC700D17F76 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		BECAA1A021623DC700D17F76 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		BECAA1A221623DC700D17F76 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		BECAA1A421623DC700D17F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECAA1A621623DC700D17F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECAA1A721623DC700D17F76 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BECAA17321623DC300D17F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECAA19421623DC700D17F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BECAA16D21623DC300D17F76 = {
+			isa = PBXGroup;
+			children = (
+				BECAA17821623DC300D17F76 /* drinkit */,
+				BECAA18C21623DC600D17F76 /* drinkit WatchKit App */,
+				BECAA19B21623DC700D17F76 /* drinkit WatchKit Extension */,
+				BECAA17721623DC300D17F76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BECAA17721623DC300D17F76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BECAA17621623DC300D17F76 /* drinkit.app */,
+				BECAA18821623DC600D17F76 /* drinkit WatchKit App.app */,
+				BECAA19721623DC700D17F76 /* drinkit WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BECAA17821623DC300D17F76 /* drinkit */ = {
+			isa = PBXGroup;
+			children = (
+				BECAA17921623DC300D17F76 /* AppDelegate.swift */,
+				BECAA17B21623DC300D17F76 /* ViewController.swift */,
+				BECAA17D21623DC300D17F76 /* Main.storyboard */,
+				BECAA18021623DC600D17F76 /* Assets.xcassets */,
+				BECAA18221623DC600D17F76 /* LaunchScreen.storyboard */,
+				BECAA18521623DC600D17F76 /* Info.plist */,
+			);
+			path = drinkit;
+			sourceTree = "<group>";
+		};
+		BECAA18C21623DC600D17F76 /* drinkit WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				BECAA18D21623DC600D17F76 /* Interface.storyboard */,
+				BECAA19021623DC600D17F76 /* Assets.xcassets */,
+				BECAA19221623DC600D17F76 /* Info.plist */,
+			);
+			path = "drinkit WatchKit App";
+			sourceTree = "<group>";
+		};
+		BECAA19B21623DC700D17F76 /* drinkit WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BECAA19C21623DC700D17F76 /* InterfaceController.swift */,
+				BECAA19E21623DC700D17F76 /* ExtensionDelegate.swift */,
+				BECAA1A021623DC700D17F76 /* NotificationController.swift */,
+				BECAA1A221623DC700D17F76 /* ComplicationController.swift */,
+				BECAA1A421623DC700D17F76 /* Assets.xcassets */,
+				BECAA1A621623DC700D17F76 /* Info.plist */,
+				BECAA1A721623DC700D17F76 /* PushNotificationPayload.apns */,
+			);
+			path = "drinkit WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BECAA17521623DC300D17F76 /* drinkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECAA1B221623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit" */;
+			buildPhases = (
+				BECAA17221623DC300D17F76 /* Sources */,
+				BECAA17321623DC300D17F76 /* Frameworks */,
+				BECAA17421623DC300D17F76 /* Resources */,
+				BECAA1B121623DC700D17F76 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BECAA18B21623DC600D17F76 /* PBXTargetDependency */,
+			);
+			name = drinkit;
+			productName = drinkit;
+			productReference = BECAA17621623DC300D17F76 /* drinkit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BECAA18721623DC600D17F76 /* drinkit WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECAA1AE21623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit WatchKit App" */;
+			buildPhases = (
+				BECAA18621623DC600D17F76 /* Resources */,
+				BECAA1AD21623DC700D17F76 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BECAA19A21623DC700D17F76 /* PBXTargetDependency */,
+			);
+			name = "drinkit WatchKit App";
+			productName = "drinkit WatchKit App";
+			productReference = BECAA18821623DC600D17F76 /* drinkit WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		BECAA19621623DC700D17F76 /* drinkit WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECAA1AA21623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit WatchKit Extension" */;
+			buildPhases = (
+				BECAA19321623DC700D17F76 /* Sources */,
+				BECAA19421623DC700D17F76 /* Frameworks */,
+				BECAA19521623DC700D17F76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "drinkit WatchKit Extension";
+			productName = "drinkit WatchKit Extension";
+			productReference = BECAA19721623DC700D17F76 /* drinkit WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BECAA16E21623DC300D17F76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Ada 2018";
+				TargetAttributes = {
+					BECAA17521623DC300D17F76 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BECAA18721623DC600D17F76 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BECAA19621623DC700D17F76 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = BECAA17121623DC300D17F76 /* Build configuration list for PBXProject "drinkit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BECAA16D21623DC300D17F76;
+			productRefGroup = BECAA17721623DC300D17F76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BECAA17521623DC300D17F76 /* drinkit */,
+				BECAA18721623DC600D17F76 /* drinkit WatchKit App */,
+				BECAA19621623DC700D17F76 /* drinkit WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BECAA17421623DC300D17F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECAA18421623DC600D17F76 /* LaunchScreen.storyboard in Resources */,
+				BECAA18121623DC600D17F76 /* Assets.xcassets in Resources */,
+				BECAA17F21623DC300D17F76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECAA18621623DC600D17F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECAA19121623DC600D17F76 /* Assets.xcassets in Resources */,
+				BECAA18F21623DC600D17F76 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECAA19521623DC700D17F76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECAA1A521623DC700D17F76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BECAA17221623DC300D17F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECAA17C21623DC300D17F76 /* ViewController.swift in Sources */,
+				BECAA17A21623DC300D17F76 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECAA19321623DC700D17F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECAA1A121623DC700D17F76 /* NotificationController.swift in Sources */,
+				BECAA1A321623DC700D17F76 /* ComplicationController.swift in Sources */,
+				BECAA19F21623DC700D17F76 /* ExtensionDelegate.swift in Sources */,
+				BECAA19D21623DC700D17F76 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BECAA18B21623DC600D17F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BECAA18721623DC600D17F76 /* drinkit WatchKit App */;
+			targetProxy = BECAA18A21623DC600D17F76 /* PBXContainerItemProxy */;
+		};
+		BECAA19A21623DC700D17F76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BECAA19621623DC700D17F76 /* drinkit WatchKit Extension */;
+			targetProxy = BECAA19921623DC700D17F76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BECAA17D21623DC300D17F76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECAA17E21623DC300D17F76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BECAA18221623DC600D17F76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECAA18321623DC600D17F76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BECAA18D21623DC600D17F76 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECAA18E21623DC600D17F76 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BECAA1A821623DC700D17F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BECAA1A921623DC700D17F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BECAA1AB21623DC700D17F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				INFOPLIST_FILE = "drinkit WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		BECAA1AC21623DC700D17F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				INFOPLIST_FILE = "drinkit WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		BECAA1AF21623DC700D17F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				IBSC_MODULE = drinkit_WatchKit_Extension;
+				INFOPLIST_FILE = "drinkit WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		BECAA1B021623DC700D17F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				IBSC_MODULE = drinkit_WatchKit_Extension;
+				INFOPLIST_FILE = "drinkit WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		BECAA1B321623DC700D17F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				INFOPLIST_FILE = drinkit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BECAA1B421623DC700D17F76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				INFOPLIST_FILE = drinkit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.drinkit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BECAA17121623DC300D17F76 /* Build configuration list for PBXProject "drinkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECAA1A821623DC700D17F76 /* Debug */,
+				BECAA1A921623DC700D17F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECAA1AA21623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECAA1AB21623DC700D17F76 /* Debug */,
+				BECAA1AC21623DC700D17F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECAA1AE21623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECAA1AF21623DC700D17F76 /* Debug */,
+				BECAA1B021623DC700D17F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECAA1B221623DC700D17F76 /* Build configuration list for PBXNativeTarget "drinkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECAA1B321623DC700D17F76 /* Debug */,
+				BECAA1B421623DC700D17F76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BECAA16E21623DC300D17F76 /* Project object */;
+}
