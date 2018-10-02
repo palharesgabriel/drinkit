@@ -43,20 +43,23 @@ extension DrinkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! QuantityTableViewCell
         let quantity = options[indexPath.row]
         let text = "\(quantity) ml"
-        cell.textLabel?.text = text
-        cell.textLabel?.tintColor = UIColor.white
+        cell.quantityLabel.text = text
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let drink = options[indexPath.row]
-        dismiss(animated: true) {
+        self.dismiss(animated: true) {
             self.delegate?.updateTotal(drink: drink)
         }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.size.height/CGFloat(options.count)
     }
     
     

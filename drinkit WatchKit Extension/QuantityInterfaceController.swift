@@ -36,9 +36,10 @@ class QuantityInterfaceController: WKInterfaceController {
             WCSession.default.sendMessage(message, replyHandler: { (response) in
                 let total = response["total"] as! Int
                 InterfaceController.total = total
+                self.dismiss()
             }, errorHandler: nil)
         }
-        self.dismiss()
+        
     }
 
     override func willActivate() {
