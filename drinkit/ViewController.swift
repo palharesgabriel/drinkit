@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
             print("Was authorized?: \(wasAuthorized)")
             if wasAuthorized {
+                NotificationHandler.shared.sendDefaultNotification()
                 // self.scheduleDrinkitNotifications()
             }
         }
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
             NotificationHandler.shared.sendNotificationWith(
                 title: "Tomar água",
                 subtitle: "Hora da Hidratação",
-                body: "Hidrate-se meu filho, é importante",
+                body: "Já tomou água? Hidrate-se meu filho, é importante",
                 timeDelay: 7200,
                 repeats: true)
 
