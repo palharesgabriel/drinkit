@@ -79,6 +79,8 @@ extension ViewController: DrinkViewControllerDelegate {
     func updateTotal(drink: Int) {
         total = total + drink
         setLabelText()
+        let message = ["total": total]
+        WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
     }
     
     func setLabelText() {
