@@ -19,14 +19,15 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        WCSession.default.delegate = self
-        WCSession.default.activate()
+       
         
         // Configure interface objects here.
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
+        WCSession.default.delegate = self
+        WCSession.default.activate()
         super.willActivate()
         percentageLabel.setText("\(InterfaceController.total)/2000")
     }
@@ -50,7 +51,10 @@ extension InterfaceController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         InterfaceController.total = message["total"] as! Int
-        percentageLabel.setText("\(InterfaceController.total)/2000")
+        DispatchQueue.main.async {
+            self.percentageLabel.setText("\(InterfaceController.total)/2000")
+        }
+        
     }
     
 }

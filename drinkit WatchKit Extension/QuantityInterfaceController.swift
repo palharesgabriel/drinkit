@@ -18,8 +18,7 @@ class QuantityInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        WCSession.default.delegate = self
-        WCSession.default.activate()
+        
         tableView.setNumberOfRows(values.count, withRowType: "TableRow")
         
         for i in 0..<tableView.numberOfRows{
@@ -35,8 +34,10 @@ class QuantityInterfaceController: WKInterfaceController {
             let message = ["value": values[rowIndex]]
             WCSession.default.sendMessage(message, replyHandler: { (response) in
                 let total = response["total"] as! Int
-                InterfaceController.total = total
-                self.dismiss()
+                DispatchQueue.main.async {
+                    InterfaceController.total = total
+                    self.dismiss()
+                }
             }, errorHandler: nil)
         }
         
@@ -45,6 +46,8 @@ class QuantityInterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        WCSession.default.delegate = self
+        WCSession.default.activate()
     }
 
     override func didDeactivate() {
