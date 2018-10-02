@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE106819216242DE00752D26 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE106818216242DE00752D26 /* DrinkViewController.swift */; };
+		BE43BCBE21624248001BCCEC /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43BCBD21624248001BCCEC /* NotificationHandler.swift */; };
 		BE57F2322162449300090C66 /* QuantityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F2312162449300090C66 /* QuantityInterfaceController.swift */; };
 		BE57F234216246E300090C66 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE57F233216246E300090C66 /* RowController.swift */; };
-		BE43BCBE21624248001BCCEC /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE43BCBD21624248001BCCEC /* NotificationHandler.swift */; };
-		BE106819216242DE00752D26 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE106818216242DE00752D26 /* DrinkViewController.swift */; };
 		BECAA17A21623DC300D17F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17921623DC300D17F76 /* AppDelegate.swift */; };
 		BECAA17C21623DC300D17F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECAA17B21623DC300D17F76 /* ViewController.swift */; };
 		BECAA17F21623DC300D17F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECAA17D21623DC300D17F76 /* Main.storyboard */; };
@@ -70,10 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE106818216242DE00752D26 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		BE43BCBD21624248001BCCEC /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		BE57F2312162449300090C66 /* QuantityInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityInterfaceController.swift; sourceTree = "<group>"; };
 		BE57F233216246E300090C66 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
-		BE43BCBD21624248001BCCEC /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
-		BE106818216242DE00752D26 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		BECAA17621623DC300D17F76 /* drinkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drinkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECAA17921623DC300D17F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECAA17B21623DC300D17F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };

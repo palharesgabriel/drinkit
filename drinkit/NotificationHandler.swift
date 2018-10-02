@@ -10,13 +10,17 @@ import Foundation
 import UserNotifications
 
 
-class NotificationHandler {
+class NotificationHandler: NSObject {
     
     private let notificationCenter = UNUserNotificationCenter.current()
     static let shared = NotificationHandler()
+    private var actions = [String: ()->Void]()
     
     
-    private init() {}
+    override private init() {
+        super.init()
+        // notificationCenter.delegate = self
+    }
     
     
     /// Request authorization for send local notifications
@@ -35,11 +39,15 @@ class NotificationHandler {
     ///   - body: Notification message
     ///   - timeDelay: Delay to trigger message
     ///   - repeats: Trigger repeat status
-    func sendNotificationWith(title: String, subtitle: String, body: String, timeDelay: TimeInterval, repeats: Bool) {
+    func sendNotificationWith(title: String, subtitle: String, body: String, timeDelay: TimeInterval, repeats: Bool, categoryIdentifier: String?) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = subtitle
         content.body = body
+        
+        if let id = categoryIdentifier {
+            content.categoryIdentifier = id
+        }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeDelay, repeats: repeats)
         let request = UNNotificationRequest(identifier: "ContentIdentifier", content: content, trigger: trigger)
@@ -58,12 +66,17 @@ class NotificationHandler {
     
     /// Send notification with default values
     func sendDefaultNotification() {
+        createNotificationCategoryWith(identifier: "fooAction", title: "Foo Action") {
+            print("Foo Action Called")
+        }
+        
         sendNotificationWith(
             title: "Default",
             subtitle: "Some Notification",
             body: "This is a default notification",
             timeDelay: 10,
-            repeats: false
+            repeats: false,
+            categoryIdentifier: "fooAction"
         )
     }
     
@@ -72,4 +85,36 @@ class NotificationHandler {
         notificationCenter.removeAllPendingNotificationRequests()
     }
     
+    
+    func createNotificationCategoryWith(identifier: String, title: String, action: @escaping ()->Void) {
+        let notificationAction = UNNotificationAction(identifier: identifier, title: title, options: [])
+        actions[identifier] = action
+        
+        let category = UNNotificationCategory(
+            identifier: identifier,
+            actions: [notificationAction],
+            intentIdentifiers: [],
+            options: [])
+        
+        notificationCenter.setNotificationCategories([category])
+    }
+    
 }
+
+
+//extension NotificationHandler: UNUserNotificationCenterDelegate {
+//
+//
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        let actionIdentifier = response.actionIdentifier
+//
+//        if let completion = actions[actionIdentifier] {
+//            completion()
+//        }
+//    }
+//
+//}
+
+
+
+

@@ -8,10 +8,12 @@
 
 import WatchConnectivity
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
     var total: Int = 0
+    let drinkIdentifier = "drinkWater"
 
     @IBOutlet weak var drinkButton: UIButton! {
         didSet {
@@ -31,10 +33,17 @@ class ViewController: UIViewController {
             session.activate()
         }
         
+        
         NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
             print("Was authorized?: \(wasAuthorized)")
             if wasAuthorized {
-                NotificationHandler.shared.sendDefaultNotification()
+                NotificationHandler.shared.sendNotificationWith(
+                    title: "Time to drinkit",
+                    subtitle: "Se hidrate seu bostinha",
+                    body: "Só confia, está na hora de tomar agua novamente",
+                    timeDelay: 10,
+                    repeats: false,
+                    categoryIdentifier: nil)
                 // self.scheduleDrinkitNotifications()
             }
         }
@@ -56,7 +65,8 @@ class ViewController: UIViewController {
                 subtitle: "Hora da Hidratação",
                 body: "Já tomou água? Hidrate-se meu filho, é importante",
                 timeDelay: 7200,
-                repeats: true)
+                repeats: true,
+                categoryIdentifier: nil)
 
             UserDefaults.standard.set(true, forKey: "isNotFirst")
         }
