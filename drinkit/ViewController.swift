@@ -6,6 +6,7 @@
 //  Copyright © 2018 Ada 2018. All rights reserved.
 //
 
+import WatchConnectivity
 import UIKit
 
 class ViewController: UIViewController {
@@ -23,6 +24,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
         NotificationHandler.shared.requestAuthorization { (wasAuthorized, err) in
             print("Was authorized?: \(wasAuthorized)")
             if wasAuthorized {
@@ -67,6 +75,29 @@ extension ViewController: DrinkViewControllerDelegate {
         let text = "\(self.total)/2000 ml"
         progressLabel.text = text
     }
+    
+}
+
+extension ViewController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        let value = message["value"] as! Int
+        self.total = total + value
+        DispatchQueue.main.async {
+            self.setLabelText()
+        }
+        let response = ["total": total]
+        replyHandler(response)
+    }
+    
     
 }
 
