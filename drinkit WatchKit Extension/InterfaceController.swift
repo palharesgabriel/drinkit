@@ -28,8 +28,10 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         WCSession.default.delegate = self
         WCSession.default.activate()
+        
+        self.percentageLabel.setText("\(InterfaceController.total)/2000")
+        
         super.willActivate()
-        percentageLabel.setText("\(InterfaceController.total)/2000")
     }
     
     override func didDeactivate() {
@@ -46,7 +48,14 @@ class InterfaceController: WKInterfaceController {
 
 extension InterfaceController: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        WCSession.default.sendMessage(["total" : true], replyHandler: { (response) in
+            InterfaceController.total = response["total"] as! Int
+            DispatchQueue.main.async {
+                self.percentageLabel.setText("\(InterfaceController.total)/2000")
+            }
+        }, errorHandler: { (error) in
+            print(error)
+        })
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {

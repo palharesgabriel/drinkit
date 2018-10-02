@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        total = UserDefaults.standard.integer(forKey: "total")
+        setLabelText()
+        
         if (WCSession.isSupported()) {
             let session = WCSession.default
             session.delegate = self
@@ -78,6 +81,7 @@ extension ViewController: DrinkViewControllerDelegate {
     
     func updateTotal(drink: Int) {
         total = total + drink
+        UserDefaults.standard.set(total, forKey: "total")
         setLabelText()
         let message = ["total": total]
         WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
@@ -101,13 +105,19 @@ extension ViewController: WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        let value = message["value"] as! Int
-        self.total = total + value
-        DispatchQueue.main.async {
-            self.setLabelText()
+        if let value = message["value"] {
+            self.total = total + (value as! Int)
+            UserDefaults.standard.set(total, forKey: "total")
+            DispatchQueue.main.async {
+                self.setLabelText()
+            }
+            let response = ["total": total]
+            replyHandler(response)
         }
-        let response = ["total": total]
-        replyHandler(response)
+        
+        if let _ = message["total"] {
+            replyHandler(["total": total])
+        }
     }
     
     

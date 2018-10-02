@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="drinkit_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="95" alignment="left" text="500/1000 ml" textAlignment="center" id="5ow-E7-q9N">
+                        <label width="136" height="95" alignment="left" text="0/2000 ml" textAlignment="center" id="5ow-E7-q9N">
                             <color key="textColor" red="0.0078431372550000003" green="0.58431372550000005" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="boldSystem" pointSize="23"/>
                         </label>
